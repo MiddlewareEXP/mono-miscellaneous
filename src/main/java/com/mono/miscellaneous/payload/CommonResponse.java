@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CommonResponse {
+    private String correlationId;
     private String responseCode;
     private String responseMsg;
 }
