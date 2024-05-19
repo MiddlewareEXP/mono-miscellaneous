@@ -5,8 +5,8 @@ server:
   port: 9000
 rapid-api:
   host: weatherapi-com.p.rapidapi.com
-  key: 605b57e0bcmshd0886f7b374d8bap1c6921jsnddf8d33cbffb
-  keystorePassword: miscellaneous
+  key: 
+  keystorePassword: 
 custom:
   logging:
     file:
