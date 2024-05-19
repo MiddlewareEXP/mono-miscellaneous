@@ -8,7 +8,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RealtimeWeatherResponse {
-    private String correlationId;
     private Location location;
     private Current current;
+    private String responseCode;
+    private String responseMsg;
+    private String correlationId;
 }

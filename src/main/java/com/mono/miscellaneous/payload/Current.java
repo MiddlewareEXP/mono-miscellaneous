@@ -10,7 +10,7 @@ import java.time.LocalTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Current {
-    private LocalTime last_updated_epoch;
+    private Long last_updated_epoch;
     private String last_updated;
     private float temp_c;
     private float temp_f;

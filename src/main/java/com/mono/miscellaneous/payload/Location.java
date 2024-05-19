@@ -16,6 +16,6 @@ public class Location {
     private float lat;
     private float lon;
     private String tz_id;
-    private LocalTime localtime_epoch;
+    private Long localtime_epoch;
     private String localtime;
 }

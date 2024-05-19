@@ -1,18 +1,16 @@
-package com.mono.miscellaneous.config;
+package com.mono.miscellaneous.common.logger;
 
 import ch.qos.logback.classic.Level;
-import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.encoder.PatternLayoutEncoder;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.Appender;
-import ch.qos.logback.core.encoder.Encoder;
 import ch.qos.logback.core.FileAppender;
+import ch.qos.logback.core.encoder.Encoder;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.io.IOException;
@@ -20,7 +18,9 @@ import java.io.IOException;
 @Configuration
 public class LoggingConfig implements WebMvcConfigurer {
 
+//    @Value("${custom.logging.file.errorLog}")
     private static String ERROR_LOG_FILE_PATH = "D:/monolith/logs/error.log";
+//    @Value("${custom.logging.file.responseLog}")
     private static String RESPONSE_LOG_FILE_PATH = "D:/monolith/logs/response.log";
 
     // Configure error log appender
@@ -47,8 +47,8 @@ public class LoggingConfig implements WebMvcConfigurer {
 
     // Configure error logger
     @Bean
-    public Logger errorLogger() throws IOException {
-        Logger logger = (Logger) LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
+    public ch.qos.logback.classic.Logger errorLogger() throws IOException {
+        ch.qos.logback.classic.Logger logger = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger(ch.qos.logback.classic.Logger.ROOT_LOGGER_NAME);
         logger.setLevel(Level.ERROR);
         logger.addAppender(errorFileAppender());
         return logger;
@@ -56,8 +56,8 @@ public class LoggingConfig implements WebMvcConfigurer {
 
     // Configure response logger
     @Bean
-    public Logger responseLogger() throws IOException {
-        Logger logger = (Logger) LoggerFactory.getLogger("com.mono.miscellaneous");
+    public ch.qos.logback.classic.Logger responseLogger() throws IOException {
+        ch.qos.logback.classic.Logger logger = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger("com.mono.miscellaneous");
         logger.setLevel(Level.INFO);
         logger.addAppender(responseFileAppender());
         return logger;
