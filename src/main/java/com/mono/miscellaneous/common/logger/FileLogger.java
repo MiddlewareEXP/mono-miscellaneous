@@ -1,28 +1,16 @@
 package com.mono.miscellaneous.common.logger;
 
-import ch.qos.logback.classic.Level;
-import ch.qos.logback.classic.LoggerContext;
-import ch.qos.logback.classic.encoder.PatternLayoutEncoder;
-import ch.qos.logback.classic.spi.ILoggingEvent;
-import ch.qos.logback.core.Appender;
-import ch.qos.logback.core.FileAppender;
-import ch.qos.logback.core.encoder.Encoder;
 import com.mono.miscellaneous.common.utilities.CommonUtilities;
-import com.mono.miscellaneous.serviceImpl.RealtimeWeatherServiceImpl;
-import lombok.val;
+import com.mono.miscellaneous.serviceImpl.RapidApiServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import java.io.IOException;
 import java.lang.reflect.Field;
 
 @Repository
 public class FileLogger {
-    private static final Logger logger = LoggerFactory.getLogger(RealtimeWeatherServiceImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(RapidApiServiceImpl.class);
 
     public void requestLogger(String clientIp, String operationName, Object myObject, String serviceId, boolean isError) {
         String tString = "";

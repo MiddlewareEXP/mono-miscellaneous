@@ -19,9 +19,9 @@ import java.io.IOException;
 public class LoggingConfig implements WebMvcConfigurer {
 
 //    @Value("${custom.logging.file.errorLog}")
-    private static String ERROR_LOG_FILE_PATH = "D:/monolith/logs/error.log";
+    private static String ERROR_LOG_FILE_PATH = "/opt/serviceLogs/monolithic/error.log";
 //    @Value("${custom.logging.file.responseLog}")
-    private static String RESPONSE_LOG_FILE_PATH = "D:/monolith/logs/response.log";
+    private static String RESPONSE_LOG_FILE_PATH = "/opt/serviceLogs/monolithic/response.log";
 
     // Configure error log appender
     @Bean
