@@ -34,7 +34,8 @@ Deploys the application to a Tomcat server, ensuring smooth rollbacks if needed.
 The Jenkins pipeline script is written in declarative syntax. Below is the detailed script:
 
 <details> <summary>Click to view the full script</summary>
-    
+
+
 pipeline {
     agent any
 
