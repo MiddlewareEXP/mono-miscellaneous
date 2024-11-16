@@ -1,4 +1,5 @@
-CI/CD Pipeline for Java Applications
+# CI/CD Pipeline for Java Applications
+
 This repository contains a Jenkins pipeline configuration for building, testing, and deploying a Java application. The pipeline integrates tools like Maven, SonarQube, OWASP Dependency Check, Nexus, and Tomcat to ensure high-quality and secure deployments.
 
 1. Pipeline Workflow
@@ -28,7 +29,8 @@ Uploads the generated artifact to Nexus for centralized storage and version mana
 9. Deploy to Application Server
 Deploys the application to a Tomcat server, ensuring smooth rollbacks if needed.
 
-Pipeline Script
+# Pipeline Script
+
 The Jenkins pipeline script is written in declarative syntax. Below is the detailed script:
 
 <details> <summary>Click to view the full script</summary>
@@ -201,7 +203,7 @@ pipeline {
 }
 </details>
 
-Prerequisites
+# Prerequisites
 To run this pipeline, ensure the following are installed and configured:
 
 1. Jenkins
@@ -240,7 +242,8 @@ These variables are defined in the pipeline for flexibility:
 | `tomcat_port`          | Port number of the Tomcat server.                      |
 
 
-Setup Instructions
+# Setup Instructions
+
 1. Clone the Repository
 Clone the source code repository mentioned in the pipeline.
   git clone https://github.com/SHAJAL987/mono-miscellaneous.git
@@ -251,13 +254,15 @@ Clone the source code repository mentioned in the pipeline.
 4. Run the Pipeline
   Trigger the Jenkins pipeline to execute the stages in sequence.
 
-Key Features
+# Key Features
+
 Automation: Automates compilation, testing, and deployment processes.
 Quality Assurance: Includes SonarQube for code review and OWASP for security checks.
 Centralized Storage: Uploads artifacts to Nexus for better version control.
 Seamless Deployment: Ensures smooth application deployment to Tomcat.
 
-Contributions
+# Contributions
+
 Feel free to submit pull requests or open issues to suggest improvements or report bugs.
 
 
