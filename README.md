@@ -35,7 +35,6 @@ The Jenkins pipeline script is written in declarative syntax. Below is the detai
 
 <details> <summary>Click to view the full script</summary>
 
-
 pipeline {
     agent any
 
