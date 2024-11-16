@@ -1,4 +1,4 @@
-# CI/CD Pipeline for Java Applications
+# Automated CI/CD Pipeline for Secure Java Application Deployment
 
 This repository contains a Jenkins pipeline configuration for building, testing, and deploying a Java application. The pipeline integrates tools like Maven, SonarQube, OWASP Dependency Check, Nexus, and Tomcat to ensure high-quality and secure deployments.
 
